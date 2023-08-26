@@ -18,16 +18,16 @@ def make_path(url):
     default_path = "/home/harsha9554/code/projects/active/project-eLeet/"
     attach_path = url[url.index("src") :]
     final_leet_path = default_path + attach_path
+    return final_leet_path
     # final_excalidraw_path = default_path + get_excalidraw_path(attach_path)
     # return final_leet_path, final_excalidraw_path
-    return final_leet_path
 
 
-# lp, ep = make_path(sys.argv[1])
 lp = make_path(sys.argv[1])
-# with open(lp, "w", encoding="utf-8") as fp:
-#     fp.write(get_insert_data(lp))
 os.system(f"touch {lp}")
 print("leet-created.")
+# lp, ep = make_path(sys.argv[1])
+# with open(lp, "w", encoding="utf-8") as fp:
+#     fp.write(get_insert_data(lp))
 # os.system(f"touch {ep}")
 # print("scribble-created.")
