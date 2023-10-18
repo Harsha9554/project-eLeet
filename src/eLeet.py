@@ -1,19 +1,21 @@
 import sys
 
-from leets.two_pointers.two_sum_ii_input_array_is_sorted_167 import (
-    two_sum_ii_input_array_is_sorted_167,
-)
+from leets.two_pointers.three_sum_15 import three_sum_15
 
-sys.stdin = open("./io/in.txt", "r")
-sys.stdout = open("./io/out.txt", "wt")
+
+sys.stdin = open(
+    "/home/harsha9554/code/projects/active/project-eLeet/src/io/in.txt", "r"
+)
+sys.stdout = open(
+    "/home/harsha9554/code/projects/active/project-eLeet/src/io/out.txt", "wt"
+)
 
 
 def main():
     t = int(input())
     for _ in range(t):
         nums = list(map(int, input().split()))
-        target = int(input())
-        print(two_sum_ii_input_array_is_sorted_167(nums, target))
+        print(three_sum_15(nums))
 
 
 main()
