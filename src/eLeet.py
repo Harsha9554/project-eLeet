@@ -1,6 +1,6 @@
 import sys
 
-from leets.two_pointers.trapping_rain_water_42 import trapping_rain_water_42
+from leets.stack.valid_parentheses_20 import valid_parentheses_20
 
 sys.stdin = open(
     "/home/harsha9554/code/projects/active/project-eLeet/src/io/in.txt", "r"
@@ -13,8 +13,8 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        nums = list(map(int, input().split()))
-        print(trapping_rain_water_42(nums))
+        s = input()
+        print(valid_parentheses_20(s))
 
 
 main()
