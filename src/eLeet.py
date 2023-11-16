@@ -1,6 +1,8 @@
 import sys
 
-from data_structures.stack import Stack
+from leets.stack.evaluate_reverse_polish_notation_150 import (
+    evaluate_reverse_polish_notation_150,
+)
 
 
 sys.stdin = open(
@@ -12,16 +14,10 @@ sys.stdout = open(
 
 
 def main():
-    # t = int(input())
-    # for _ in range(t):
-    #     s = input()
-    s = Stack()
-    s.push("zeke")
-    s.push("eren")
-    s.push("reiner")
-    s.pop()
-    print(s.peek())
-    print(s)
+    t = int(input())
+    for _ in range(t):
+        tokens = list(map(str, input().split()))
+        print(evaluate_reverse_polish_notation_150(tokens))
 
 
 main()
