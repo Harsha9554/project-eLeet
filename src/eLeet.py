@@ -1,8 +1,6 @@
 import sys
 
-from leets.stack.evaluate_reverse_polish_notation_150 import (
-    evaluate_reverse_polish_notation_150,
-)
+from leets.stack.generate_parentheses_22 import generate_parentheses_22
 
 
 sys.stdin = open(
@@ -16,8 +14,8 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        tokens = list(map(str, input().split()))
-        print(evaluate_reverse_polish_notation_150(tokens))
+        n = int(input())
+        print(generate_parentheses_22(n))
 
 
 main()
