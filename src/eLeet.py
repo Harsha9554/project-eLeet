@@ -1,6 +1,7 @@
 import sys
 
-from leets.stack.valid_parentheses_20 import valid_parentheses_20
+from data_structures.stack import Stack
+
 
 sys.stdin = open(
     "/home/harsha9554/code/projects/active/project-eLeet/src/io/in.txt", "r"
@@ -11,10 +12,16 @@ sys.stdout = open(
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        s = input()
-        print(valid_parentheses_20(s))
+    # t = int(input())
+    # for _ in range(t):
+    #     s = input()
+    s = Stack()
+    s.push("zeke")
+    s.push("eren")
+    s.push("reiner")
+    s.pop()
+    print(s.peek())
+    print(s)
 
 
 main()
