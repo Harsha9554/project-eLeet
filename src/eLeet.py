@@ -1,6 +1,6 @@
 import sys
 
-from leets.stack.generate_parentheses_22 import generate_parentheses_22
+from leets.stack.daily_temperatures_739 import daily_temperatures_739
 
 
 sys.stdin = open(
@@ -14,8 +14,8 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        print(generate_parentheses_22(n))
+        temps = list(map(int, input().split()))
+        print(daily_temperatures_739(temps))
 
 
 main()
