@@ -1,4 +1,5 @@
 import sys
+from leets.stack.car_fleet_853 import car_fleet_853
 
 from leets.stack.daily_temperatures_739 import daily_temperatures_739
 
@@ -14,8 +15,10 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        temps = list(map(int, input().split()))
-        print(daily_temperatures_739(temps))
+        target = int(input())
+        position = list(map(int, input().split()))
+        speed = list(map(int, input().split()))
+        print(car_fleet_853(target, position, speed))
 
 
 main()
