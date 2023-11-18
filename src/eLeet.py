@@ -1,7 +1,6 @@
 import sys
-from leets.stack.car_fleet_853 import car_fleet_853
 
-from leets.stack.daily_temperatures_739 import daily_temperatures_739
+from leets.binary_search.binary_search_704 import binary_search_704
 
 
 sys.stdin = open(
@@ -15,10 +14,9 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        target = int(input())
-        position = list(map(int, input().split()))
-        speed = list(map(int, input().split()))
-        print(car_fleet_853(target, position, speed))
+        nums = list(map(int, input().split()))
+        t = int(input())
+        print(binary_search_704(nums, t))
 
 
 main()
