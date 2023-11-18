@@ -1,6 +1,6 @@
 import sys
 
-from leets.binary_search.binary_search_704 import binary_search_704
+from leets.binary_search.search_a_2d_matrix_74 import search_a_2d_matrix_74
 
 
 sys.stdin = open(
@@ -14,9 +14,12 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        nums = list(map(int, input().split()))
+        r, c = map(int, input().split())
+        mat = []
+        for _ in range(r):
+            mat.append(list(map(int, input().split())))
         t = int(input())
-        print(binary_search_704(nums, t))
+        print(search_a_2d_matrix_74(mat, t))
 
 
 main()
