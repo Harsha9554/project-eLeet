@@ -16,16 +16,27 @@ def get_insert_data(url):
 
 def make_path(url):
     default_path = "/home/harsha9554/code/projects/active/project-eLeet/"
+    defautl_excalidraw_path = "/mnt/c/Users/Sai SriHarsha G/iCloudDrive/iCloud~md~obsidian/harsha's-vault/excalidraw/project-eleet/"
     attach_path = url[url.index("src") :]
     final_leet_path = default_path + attach_path
-    return final_leet_path
+    return (
+        final_leet_path,
+        defautl_excalidraw_path,
+        attach_path.replace(".py", ".excalidraw.md").split("/")[-1].split("_")[-1],
+    )
     # final_excalidraw_path = default_path + get_excalidraw_path(attach_path)
     # return final_leet_path, final_excalidraw_path
 
 
-lp = make_path(sys.argv[1])
+lp, ep, ap = make_path(sys.argv[1])
 os.system(f"touch {lp}")
 print("leet-created.")
+os.chdir(ep)
+os.system(f"touch {ap}")
+print(ep)
+print(ap)
+print("excal-created.")
+
 # lp, ep = make_path(sys.argv[1])
 # with open(lp, "w", encoding="utf-8") as fp:
 #     fp.write(get_insert_data(lp))

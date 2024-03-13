@@ -1,6 +1,8 @@
 import sys
 
-from leets.binary_search.search_a_2d_matrix_74 import search_a_2d_matrix_74
+from leets.sliding_window.best_time_to_buy_and_sell_stock_121 import (
+    best_time_to_buy_and_sell_stock_121,
+)
 
 
 sys.stdin = open(
@@ -14,12 +16,8 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        r, c = map(int, input().split())
-        mat = []
-        for _ in range(r):
-            mat.append(list(map(int, input().split())))
-        t = int(input())
-        print(search_a_2d_matrix_74(mat, t))
+        stocks = list(map(int, input().split()))
+        print(best_time_to_buy_and_sell_stock_121(stocks))
 
 
 main()
