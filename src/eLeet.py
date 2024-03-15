@@ -1,8 +1,6 @@
 import sys
 
-from leets.sliding_window.best_time_to_buy_and_sell_stock_121 import (
-    best_time_to_buy_and_sell_stock_121,
-)
+from leets.sliding_window.minimum_window_substring_76 import minimum_window_substring_76
 
 
 sys.stdin = open(
@@ -16,8 +14,8 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        stocks = list(map(int, input().split()))
-        print(best_time_to_buy_and_sell_stock_121(stocks))
+        s, t = map(str, input().split())
+        print(minimum_window_substring_76(s, t))
 
 
 main()

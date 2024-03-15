@@ -17,6 +17,15 @@ print(frequency_map)
 for character in a:
     if character not in frequency_map:
         frequency_map[character] = 1
-    else: frequency_map[character] += 1
+    else:
+        frequency_map[character] += 1
 print(frequency_map)
 
+
+def add_to_d(n, d):
+    d[n] = d.get(n, 0) + 1
+
+
+d = {1: 2, 2: 4}
+add_to_d(3, d)
+print(d)
