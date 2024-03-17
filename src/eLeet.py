@@ -1,6 +1,8 @@
 import sys
 
-from leets.sliding_window.minimum_window_substring_76 import minimum_window_substring_76
+from leets.sliding_window.longest_repeating_character_replacement_424 import (
+    longest_repeating_character_replacement_424,
+)
 
 
 sys.stdin = open(
@@ -14,8 +16,9 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        s, t = map(str, input().split())
-        print(minimum_window_substring_76(s, t))
+        s = input()
+        k = int(input())
+        print(longest_repeating_character_replacement_424(s, k))
 
 
 main()
