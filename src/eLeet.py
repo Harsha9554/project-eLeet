@@ -1,7 +1,7 @@
 import sys
 
 from data_structures.linked_list import ListNode
-from leets.linked_list.reverse_linked_list_206 import reverse_linked_list_206
+from leets.linked_list.merge_two_sorted_lists_21 import merge_two_sorted_lists_21
 
 
 sys.stdin = open(
@@ -28,9 +28,12 @@ def generate_list(nodes):
 def main():
     t = int(input())
     for _ in range(t):
-        nodes = list(map(int, input().split()))
-        root = generate_list(nodes)
-        print(reverse_linked_list_206(root))
+        l1_nodes = list(map(int, input().split()))
+        l2_nodes = list(map(int, input().split()))
+        l1 = generate_list(l1_nodes)
+        l2 = generate_list(l2_nodes)
+        print(merge_two_sorted_lists_21(l1, l2))
+        print()
 
 
 main()
