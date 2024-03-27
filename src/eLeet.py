@@ -1,8 +1,7 @@
 import sys
 
-from leets.binary_search.search_in_rotated_sorted_array_33 import (
-    binary_search,
-    search_in_rotated_sorted_array_33,
+from leets.binary_search.find_minimum_in_rotated_sorted_array_153 import (
+    find_minimum_in_rotated_sorted_array_153,
 )
 
 sys.stdin = open(
@@ -17,8 +16,7 @@ def main():
     t = int(input())
     for _ in range(t):
         nums = list(map(int, input().split()))
-        k = int(input())
-        print(search_in_rotated_sorted_array_33(nums, k))
+        print(find_minimum_in_rotated_sorted_array_153(nums))
 
 
 main()
