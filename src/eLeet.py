@@ -1,9 +1,9 @@
 import sys
 
-from leets.sliding_window.longest_repeating_character_replacement_424 import (
-    longest_repeating_character_replacement_424,
+from leets.binary_search.search_in_rotated_sorted_array_33 import (
+    binary_search,
+    search_in_rotated_sorted_array_33,
 )
-
 
 sys.stdin = open(
     "/home/harsha9554/code/projects/active/project-eLeet/src/io/in.txt", "r"
@@ -16,9 +16,9 @@ sys.stdout = open(
 def main():
     t = int(input())
     for _ in range(t):
-        s = input()
+        nums = list(map(int, input().split()))
         k = int(input())
-        print(longest_repeating_character_replacement_424(s, k))
+        print(search_in_rotated_sorted_array_33(nums, k))
 
 
 main()
